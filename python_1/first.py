@@ -1,6 +1,5 @@
 age = 12
 name = "salahuddin"
-height= 6.0
 #print(age)
 
 Statement  = '  '
@@ -23,5 +22,3 @@ for i in range(1, 6):
 
 
 
-colors = ['red','yellow','blue']
-print(colors[0])
