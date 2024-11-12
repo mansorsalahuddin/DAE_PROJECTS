@@ -18,8 +18,8 @@ print(my_variable)
 
 
 #Loop through numbers from 1 to 5
-for i in range(1, 6):
-    print(i)
+for current_number in range(1, 6):
+    print(current_number)
 
 
 

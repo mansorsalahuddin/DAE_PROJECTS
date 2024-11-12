@@ -90,9 +90,9 @@ def main_menu():
 def view_tasks():
     print("\nYour Tasks:")
     if tasks:
-        for i, task in enumerate(tasks, start=1):
+        for todo, task in enumerate(tasks, start=1):
             status = "Complete" if task.is_complete else "Incomplete"
-            print(f"{i}. {task.title} - {task.description} (Due: {task.due_date}) - Status: {status}")
+            print(f"{todo}. {task.title} - {task.description} (Due: {task.due_date}) - Status: {status}")
     else:
         print("No tasks available.")
     input("Press Enter to return to the main menu.")
