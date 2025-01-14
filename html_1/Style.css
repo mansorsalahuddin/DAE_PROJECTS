@@ -1,9 +1,9 @@
-BE85B9 ul {
+h1 {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #be85b9;
+  background-color: #c580c0;
 }
 
 li {
@@ -13,4 +13,8 @@ li {
 li a {
   display: block;
   padding: 8px;
+}
+
+body {
+  background-color: #c580c0;
 }
