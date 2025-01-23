@@ -25,23 +25,26 @@
     </style>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="addTask.html">View Tasks</a></li>
-        <li><a href="addTask.html">Add Task</a></li>
-        <li><a href="#edit-tasks">Edit Tasks</a></li>
-      </ul>
-    </nav>
-
-    <div class="calendar-container">
-      <div class="calendar-header">
-        <button id="prev-month">&#9664;</button>
-        <div id="calendar-month">January 2025</div>
-        <button id="next-month">&#9654;</button>
+    <h1>Welcome</h1>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="addTask.html">View Tasks</a></li>
+          <li><a href="addTask.html">Add Task</a></li>
+          <li><a href="#edit-tasks">Edit Tasks</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="calendar-container">
+        <div class="calendar-header">
+          <button id="prev-month">&#9664;</button>
+          <div id="calendar-month">January 2025</div>
+          <button id="next-month">&#9654;</button>
+        </div>
+        <div class="calendar-grid" id="calendar-days"></div>
       </div>
-      <div class="calendar-grid" id="calendar-days"></div>
-    </div>
-
+    </main>
     <!-- Circular logo -->
     <div class="logo">
       <img src="07edb3d06c3104a231b52af1c918438c.jpg" alt="Logo" />
@@ -105,5 +108,16 @@
       // Initial render
       renderCalendar();
     </script>
+    <footer>
+      <div class="foot">
+        <p>&copy; 2025 Salahuddin.</p>
+        <p>
+          Contact:
+          <a href="mailto:mansorsalahuddin9@gmail.com"
+            >mansorsalahuddin9@gmail.com</a
+          >
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

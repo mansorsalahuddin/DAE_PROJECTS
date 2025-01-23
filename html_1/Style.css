@@ -1,71 +1,77 @@
+/* General Body and Layout Styles */
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  color: #333;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 100vh;
+  height: 100vh; /* Full viewport height */
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  background: #905f92;
-  display: flex;
-  justify-content: center;
-}
-
-li {
-  margin: 0;
-}
-
-li a {
-  display: block;
-  color: white;
+h1 {
   text-align: center;
-  padding: 14px 20px;
+  color: #333;
+  margin-top: 20px;
+}
+
+header {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: white;
   text-decoration: none;
 }
 
-li a:hover {
-  background: #be85b9;
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
+/* Main content should take the remaining space */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: flex-start;
+  width: 100%;
+  padding-right: 20px; /* Space from the right edge */
+}
+
+/* Calendar Styles */
 .calendar-container {
+  width: 90%;
   max-width: 400px;
-  background: #fff;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin-top: 10px;
 }
 
 .calendar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
-.calendar-header button {
-  background: #905f92;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.calendar-header button:hover {
-  background: #be85b9;
-}
-
-.calendar-header div {
-  font-size: 12px;
+#calendar-month {
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -73,46 +79,41 @@ li a:hover {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 5px;
+  margin-top: 20px;
 }
 
 .calendar-day {
-  padding: 15px;
   text-align: center;
-  background: #f1f1f1;
-  border-radius: 5px;
-  font-size: 14px;
-  color: #333;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #fff;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .calendar-day:hover {
-  background: #905f92;
-  color: white;
+  background-color: #f0f0f0;
 }
 
 .current-day {
-  background: #905f92;
+  background-color: #ffa500;
   color: white;
-  font-weight: bold;
 }
 
-h1 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #c580c0;
+/* Footer Styles */
+footer {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* Ensures the footer is pushed to the bottom */
 }
 
-li {
-  float: left;
+.foot a {
+  color: #ffa500;
 }
 
-li a {
-  display: block;
-  padding: 8px;
-}
-
-body {
-  background-color: #c580c0;
+.foot a:hover {
+  text-decoration: underline;
 }
