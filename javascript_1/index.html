@@ -16,12 +16,71 @@
 
     <div class="container">
       <h1>🎯 Fun Task Organizer 🎨</h1>
+
       <div class="task-input">
         <input type="text" id="taskInput" placeholder="🚀 Add a new task..." />
+        <input type="datetime-local" id="taskDateTime" />
         <button id="addTaskBtn">➕ Add</button>
       </div>
+
       <p>Total Tasks: <span id="taskCount">0</span></p>
       <ul id="taskList"></ul>
+    </div>
+
+    <div id="miniCalendar">
+      <p id="calendarText">📆 Calendar...</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+<div id="chatbox-container">
+  <div id="chatContent" class="chat-content"></div>
+  <input type="text" id="userInput" placeholder="Type your message... 😎" />
+  <button id="sendBtn">Send</button>
+</div>
+<div class="cartoon-container">
+  <img src="pic.png" alt="Cartoon" id="cartoon" />
+</div>
+<div class="cartoon-container">
+  <img src="pic.png" alt="Cartoon" id="cartoon" />
+</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎯 Task Organizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>🎯 Fun Task Organizer 🎨</h1>
+
+      <div class="task-input">
+        <input type="text" id="taskInput" placeholder="🚀 Add a new task..." />
+        <input type="datetime-local" id="taskDateTime" />
+        <button id="addTaskBtn">➕ Add</button>
+      </div>
+
+      <p>Total Tasks: <span id="taskCount">0</span></p>
+      <ul id="taskList"></ul>
+    </div>
+
+    <!-- Add the cartoon image here -->
+    <div class="cartoon-container">
+      <img src="pic.png" alt="Cartoon" id="cartoon" />
+    </div>
+
+    <div id="miniCalendar">
+      <p id="calendarText">📆 Calendar...</p>
     </div>
 
     <script src="script.js"></script>
