@@ -19,10 +19,13 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     marginTop: 20,
+    flex: 1,
+    justifyContent: "center",
   },
   text: {
     marginTop: 10,
     fontSize: 16,
+    textAlign: "center",
   },
 });
 
