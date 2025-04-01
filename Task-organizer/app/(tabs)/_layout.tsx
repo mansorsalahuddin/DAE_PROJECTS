@@ -1,55 +1,41 @@
-// app/tabs/_layout.tsx
-import { Tabs } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
-export default function TabsLayout() {
+type LayoutProps = {
+  title: string;
+  children: React.ReactNode;
+};
+
+const Layout: React.FC<LayoutProps> = ({ title, children }) => {
   return (
-    <Tabs>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: "Home",
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="home" size={24} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: "Explore",
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="search" size={24} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="qr-code"
-        options={{
-          title: "QR Code",
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="qr-code" size={24} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="qr-code"
-        options={{
-          title: "QR Code",
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="qr-code" size={24} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="qr-code"
-        options={{
-          title: "QR Code",
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="qr-code" size={24} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>{title}</Text>
+      </View>
+      <View style={styles.content}>{children}</View>
+    </View>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#f4f4f4",
+  },
+  header: {
+    padding: 20,
+    backgroundColor: "#6200ea",
+    alignItems: "center",
+  },
+  headerText: {
+    color: "#fff",
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  content: {
+    flex: 1,
+    padding: 15,
+  },
+});
+
+export default Layout;
