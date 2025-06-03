@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-background text-foreground">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ℹ️ About Task Organizer</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dist/styles.css" />
   </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">🏠 Home</a></li>
-        <li><a href="about.html">ℹ️ About</a></li>
+  <body class="min-h-screen font-sans">
+    <nav class="bg-muted p-4 shadow">
+      <ul class="flex space-x-4">
+        <li>
+          <a href="index.html" class="text-primary hover:underline">🏠 Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="text-primary hover:underline">ℹ️ About</a>
+        </li>
       </ul>
     </nav>
 
-    <div class="container">
-      <h1>ℹ️ About Task Organizer</h1>
-      <p>
-        Welcome to the **Fun Task Organizer**! This is a simple, interactive,
-        and colorful app to help you manage your daily tasks in a fun way.
+    <main class="container mx-auto px-4 py-8">
+      <h1 class="text-2xl font-bold mb-4">ℹ️ About Task Organizer</h1>
+      <p class="mb-4">
+        Welcome to the <strong>Fun Task Organizer</strong>! This is a simple,
+        interactive, and colorful app to help you manage your daily tasks in a
+        fun way.
       </p>
-      <p>Features:</p>
-      <ul>
+      <p class="font-semibold mb-2">Features:</p>
+      <ul class="list-disc list-inside space-y-1">
         <li>✅ Add & Remove Tasks</li>
         <li>🎉 Mark Tasks as Completed</li>
         <li>💾 Saves Tasks Even After Refresh</li>
         <li>✨ Smooth Animations & Colorful UI</li>
       </ul>
-    </div>
+    </main>
   </body>
 </html>

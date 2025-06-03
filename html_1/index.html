@@ -3,125 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tasks and Calendar</title>
-    <link rel="stylesheet" href="Style.css" />
-    <style>
-      .logo {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-
-      .logo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    </style>
+    <title>Sala Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Welcome</h1>
-    <header>
-      <nav>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>Organizo</h2>
+      </div>
+      <nav class="navigation">
         <ul>
-          <li><a href="addTask.html">View Tasks</a></li>
-          <li><a href="addTask.html">Add Task</a></li>
-          <li><a href="#edit-tasks">Edit Tasks</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">My Tasks</a></li>
+          <li><a href="#">Notifications</a></li>
         </ul>
       </nav>
-    </header>
-    <main>
-      <div class="calendar-container">
-        <div class="calendar-header">
-          <button id="prev-month">&#9664;</button>
-          <div id="calendar-month">January 2025</div>
-          <button id="next-month">&#9654;</button>
+      <footer class="footer">
+        <ul>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Log out</a></li>
+        </ul>
+      </footer>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <input type="text" placeholder="Search..." class="search-bar" />
+        <button class="new-task-btn">+ New task</button>
+      </header>
+
+      <!-- Dashboard Content -->
+      <section class="dashboard">
+        <!-- Calendar -->
+        <div class="calendar">
+          <h3>March 2022</h3>
+          <div class="calendar-grid">
+            <div class="calendar-day">1</div>
+            <div class="calendar-day">2</div>
+            <div class="calendar-day">3</div>
+            <div class="calendar-day">4</div>
+            <div class="calendar-day">5</div>
+            <!-- More calendar days -->
+          </div>
         </div>
-        <div class="calendar-grid" id="calendar-days"></div>
-      </div>
+
+        <!-- Task List -->
+        <div class="task-list">
+          <h3>My Tasks (5)</h3>
+          <ul>
+            <li class="task-item">
+              <input type="checkbox" />
+              <span>Finish monthly reporting</span>
+              <span class="task-status">Today</span>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" />
+              <span>Contract signing</span>
+              <span class="task-status">Tomorrow</span>
+            </li>
+            <!-- More tasks -->
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="categories">
+          <h3>My Categories</h3>
+          <ul>
+            <li>Work</li>
+            <li>Family</li>
+            <li>Freelance work</li>
+            <li>Conference planning</li>
+            <li><button class="add-category-btn">+ Add more</button></li>
+          </ul>
+        </div>
+
+        <!-- Tracking -->
+        <div class="tracking">
+          <h3>My Tracking</h3>
+          <div class="tracking-item">
+            <span>Creating wireframe</span>
+            <div class="timer">1h 25m 30s</div>
+          </div>
+          <div class="tracking-item">
+            <span>Slack logo design</span>
+            <div class="timer">30m 18s</div>
+          </div>
+          <!-- More tracking items -->
+        </div>
+      </section>
     </main>
-    <!-- Circular logo -->
-    <div class="logo">
-      <img src="07edb3d06c3104a231b52af1c918438c.jpg" alt="Logo" />
-    </div>
 
-    <script>
-      const calendarDays = document.getElementById("calendar-days");
-      const calendarMonth = document.getElementById("calendar-month");
-      const prevMonthButton = document.getElementById("prev-month");
-      const nextMonthButton = document.getElementById("next-month");
-
-      let currentDate = new Date();
-
-      function renderCalendar() {
-        const currentDay = currentDate.getDate();
-        const currentMonth = currentDate.toLocaleString("default", {
-          month: "long",
-        });
-        const currentYear = currentDate.getFullYear();
-        calendarMonth.textContent = `${currentMonth} ${currentYear}`;
-
-        const daysInMonth = new Date(
-          currentYear,
-          currentDate.getMonth() + 1,
-          0
-        ).getDate();
-        const firstDayIndex = new Date(
-          currentYear,
-          currentDate.getMonth(),
-          1
-        ).getDay();
-
-        // Clear previous days
-        calendarDays.innerHTML = "";
-
-        // Add empty slots for the days before the first day of the month
-        for (let i = 0; i < firstDayIndex; i++) {
-          calendarDays.appendChild(document.createElement("div"));
-        }
-
-        // Add days of the current month
-        for (let day = 1; day <= daysInMonth; day++) {
-          const dayDiv = document.createElement("div");
-          dayDiv.textContent = day;
-          dayDiv.classList.add("calendar-day");
-          if (day === currentDay) dayDiv.classList.add("current-day");
-          calendarDays.appendChild(dayDiv);
-        }
-      }
-
-      prevMonthButton.addEventListener("click", () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar();
-      });
-
-      nextMonthButton.addEventListener("click", () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar();
-      });
-
-      // Initial render
-      renderCalendar();
-    </script>
-    <footer>
-      <div class="foot">
-        <p>&copy; 2025 Salahuddin.</p>
-        <p>
-          Contact:
-          <a href="mailto:mansorsalahuddin9@gmail.com"
-            >mansorsalahuddin9@gmail.com</a
-          >
-        </p>
-      </div>
-    </footer>
-    <section class="task-history">
-      <h2>Task History</h2>
-      <ul id="task-list"></ul>
-    </section>
+    <script src="script.js"></script>
   </body>
 </html>
