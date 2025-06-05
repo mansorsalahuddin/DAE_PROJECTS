@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-pink-orange-gradient font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Main Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="min-h-screen flex justify-center items-center">
+    <div class="container bg-white p-6 rounded shadow max-w-md w-full">
+      <h1 class="text-2xl font-bold mb-4 text-pink-700 text-center">
+        Welcome to Your Task Manager
+      </h1>
+      <form id="task-form" class="flex space-x-2 mb-4">
+        <input
+          type="text"
+          id="task"
+          name="task"
+          placeholder="New Task..."
+          required
+          class="flex-grow border p-2 rounded"
+        />
+        <button
+          type="submit"
+          class="bg-pink-500 text-white px-4 rounded hover:bg-pink-600 transition"
+        >
+          Add Task
+        </button>
+      </form>
+      <ul id="task-list" class="space-y-2"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

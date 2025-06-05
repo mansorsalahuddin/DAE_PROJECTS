@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffeaf4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.login-signup-box {
+  margin-top: 20px;
+  background: #fff0f7;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ffb6c1;
+  width: 300px;
+  text-align: center;
+}
+
+input,
+button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+a {
+  color: #ff69b4;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+#app {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.calendar-box,
+.task-box,
+.history-box {
+  background-color: #fff0f5;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px #ffc0cb;
+  min-width: 280px;
+}
+
+#taskList li,
+#taskHistory li {
+  background: #fff;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.task-actions {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎯 Fun Task Organizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>🎯 Task Organizer</h1>
+        <p id="currentDate"></p>
+      </header>
+
+      <main>
+        <section class="task-entry">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Add a task..."
+            required
+          />
+          <input type="datetime-local" id="taskDateTime" required />
+          <button id="addTaskBtn">➕</button>
+        </section>
+
+        <ul id="taskList" class="task-list"></ul>
+      </main>
+
+      <aside class="history-panel">
+        <h2>📜 Task History</h2>
+        <ul id="taskHistory"></ul>
+      </aside>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

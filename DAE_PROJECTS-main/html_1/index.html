@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sala Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>Organizo</h2>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">My Tasks</a></li>
+          <li><a href="#">Notifications</a></li>
+        </ul>
+      </nav>
+      <footer class="footer">
+        <ul>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Log out</a></li>
+        </ul>
+      </footer>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <input type="text" placeholder="Search..." class="search-bar" />
+        <button class="new-task-btn">+ New task</button>
+      </header>
+
+      <!-- Dashboard Content -->
+      <section class="dashboard">
+        <!-- Calendar -->
+        <div class="calendar">
+          <h3>March 2022</h3>
+          <div class="calendar-grid">
+            <div class="calendar-day">1</div>
+            <div class="calendar-day">2</div>
+            <div class="calendar-day">3</div>
+            <div class="calendar-day">4</div>
+            <div class="calendar-day">5</div>
+            <!-- More calendar days -->
+          </div>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list">
+          <h3>My Tasks (5)</h3>
+          <ul>
+            <li class="task-item">
+              <input type="checkbox" />
+              <span>Finish monthly reporting</span>
+              <span class="task-status">Today</span>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" />
+              <span>Contract signing</span>
+              <span class="task-status">Tomorrow</span>
+            </li>
+            <!-- More tasks -->
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="categories">
+          <h3>My Categories</h3>
+          <ul>
+            <li>Work</li>
+            <li>Family</li>
+            <li>Freelance work</li>
+            <li>Conference planning</li>
+            <li><button class="add-category-btn">+ Add more</button></li>
+          </ul>
+        </div>
+
+        <!-- Tracking -->
+        <div class="tracking">
+          <h3>My Tracking</h3>
+          <div class="tracking-item">
+            <span>Creating wireframe</span>
+            <div class="timer">1h 25m 30s</div>
+          </div>
+          <div class="tracking-item">
+            <span>Slack logo design</span>
+            <div class="timer">30m 18s</div>
+          </div>
+          <!-- More tracking items -->
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
